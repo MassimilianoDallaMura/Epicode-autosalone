@@ -4,7 +4,7 @@ export interface Car {
     model: 'string',
     year: 'number',
     price: 'number',
-    avaible: boolean
+    available: boolean
     brandLogo: 'string'
 }
 

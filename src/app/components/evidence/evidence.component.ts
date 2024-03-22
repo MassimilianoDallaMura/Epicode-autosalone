@@ -10,7 +10,7 @@ import { Car } from 'src/app/models/car.interface';
 
 export class EvidenceComponent {
   cars!: Car[];
-  displayedCar: Car | undefined;
+
 
 
   constructor() {
@@ -29,7 +29,7 @@ export class EvidenceComponent {
 
   displayRandomCar() {
     const randomIndex = Math.floor(Math.random() * this.cars.length);
-    this.displayedCar = this.cars[randomIndex];
+
   }
   
 }

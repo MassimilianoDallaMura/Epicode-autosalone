@@ -1,20 +1,25 @@
 <div class="container-fluid">
-    <h1 class="text-center mt-4 mb-5">Auto in evidenza</h1>
-  
-    <div class="row d-flex justify-content-around">
-      <ng-container *ngFor="let car of displayedCar; let i = index">
-        <div class="col-4 mx-auto" *ngIf="i < 2">
-          <div class="card" style="width: 18rem;">
-            <img src="https://www.kimballstock.com/pix/car/p/{{ displayedCar?.modelImage }}" class="card-img-top" alt="{{ displayedCar?.modelImage }}" />
-            <h5 class="card-header">{{ car.brand }}</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+  <h1 class="text-center mt-4 mb-5">Auto in evidenza</h1>
+
+  <div class="row">
+    <ng-container *ngFor="let car of cars.slice(0, 2); let i = index">
+      <div class="col-6">
+        <div class="card mb-3">
+          <img
+            src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+            class="card-img-top"
+            alt="{{ car.modelImage }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+            <div class="d-flex justify-content-center align-items-baseline">
+              <p class="card-text btn btn-primary me-3">ANNO: {{ car.year }}</p>
+              <a class="btn btn-primary">PREZZO: {{ car.price }}</a>
+            </div>
+            <a href="#" class="btn btn-primary">PRONTA CONSEGNA: {{ car.available }}</a>
           </div>
         </div>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
   </div>
-  
+</div>
