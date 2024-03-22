@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <h1 class="text-center mt-4 mb-5">Auto in evidenza</h1>
+  
+    <div class="row d-flex justify-content-around">
+      <ng-container *ngFor="let car of displayedCar; let i = index">
+        <div class="col-4 mx-auto" *ngIf="i < 2">
+          <div class="card" style="width: 18rem;">
+            <img src="https://www.kimballstock.com/pix/car/p/{{ displayedCar?.modelImage }}" class="card-img-top" alt="{{ displayedCar?.modelImage }}" />
+            <h5 class="card-header">{{ car.brand }}</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

@@ -1,0 +1,1 @@
+nel component marchi html ho utilizzato l'indice per selezionare 3 brand differenti. Nel caso l'ordine dell'array cambiasse, rischio che vengano sfasate. Sarebbe meglio filtrare l'array in qualche modo.

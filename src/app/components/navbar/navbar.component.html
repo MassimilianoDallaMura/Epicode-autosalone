@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      [routerLink]="['/']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <img
+        src="../../../assets/Clean Modern App Portfolio Mockup Presentation.svg"
+        alt=""
+        width="100"
+      />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <li>
+          <a
+            class="nav-link active text-white"
+            aria-current="page"
+            [routerLink]="['/home']"
+            routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-white"
+            [routerLink]="['/fiat']"
+            routerLinkActive="active"
+            >Fiat</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-white"
+            [routerLink]="['/ford']"
+            routerLinkActive="active"
+            >Ford</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link text-white"
+            aria-disabled="true"
+            [routerLink]="['/audi']"
+            routerLinkActive="active"
+            >Audi</a
+          >
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>
