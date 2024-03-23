@@ -1,3 +1,52 @@
 <div class="container-fluid">
-    <h2 class="text-center">FORD</h2>
+  <h1 class="text-center mt-5 mb-3">Ford</h1>
+  <div class="row justify-content-center"> <!-- Aggiunta della classe justify-content-center -->
+    <ng-container *ngFor="let car of cars">
+      <div class="col-12 col-md-6">
+        <div
+          class="card mb-3"
+          [ngClass]="{
+            'bg-danger': !car.available,
+            'bg-success': car.available
+          }"
+        >
+          <img
+            src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+            class="card-img-top"
+            alt="{{ car.modelImage }}"
+          />
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6 card-body">
+              <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+              <div class="d-flex">
+                <p
+                  class="card-text btn btn-outline-dark me-3"
+                  style="pointer-events: none"
+                >
+                  ANNO: {{ car.year }}
+                </p>
+                <p
+                  class="btn btn-outline-dark text-black"
+                  style="pointer-events: none"
+                >
+                  PREZZO: {{ car.price }}
+                </p>
+              </div>
+              <p
+                class="btn btn-outline-dark text-black"
+                style="pointer-events: none"
+              >
+                PRONTA CONSEGNA: {{ car.available }}
+              </p>
+            </div>
+            <div class="col-6">
+              <button type="button" class="btn btn-primary" [disabled]="!car.available">
+                ORDINA SUBITO!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
+</div>

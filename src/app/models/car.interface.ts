@@ -1,6 +1,6 @@
 export interface Car {      //impaccheto i dati
     modelImage: 'string',
-    brand: 'sring',
+    brand: 'string',
     model: 'string',
     year: 'number',
     price: 'number',
