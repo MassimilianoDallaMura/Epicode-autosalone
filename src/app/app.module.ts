@@ -14,6 +14,7 @@ import { AudiComponent } from './components/audi/audi.component';
 import { MarchiComponent } from './components/marchi/marchi.component';
 import { EvidenceComponent } from './components/evidence/evidence.component';
 import { CarComponent } from './components/car/car.component';
+import { PromozioniComponent } from './components/promozioni/promozioni.component';
 
 const routes: Route[] = [
   {
@@ -48,6 +49,7 @@ const routes: Route[] = [
     MarchiComponent,
     EvidenceComponent,
     CarComponent,
+    PromozioniComponent,
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes)

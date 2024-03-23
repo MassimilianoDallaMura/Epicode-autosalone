@@ -1,5 +1,5 @@
 <div class="row">
-    <ng-container> 
+    
       <div>
         <div class="card mb-3" [ngClass]="{ 'bg-danger': !car.available, 'bg-success': car.available }">
           <img
@@ -13,11 +13,19 @@
               <p class="card-text btn text-black me-3" style="pointer-events: none;">ANNO: {{ car.year }}</p>
               <p class="btn text-black" style="pointer-events: none;">PREZZO: {{ car.price }} €</p>
             </div>
-            <a href="#" class="btn btn-primary">PRONTA CONSEGNA: {{ car.available }}</a>
+            <p
+                class="btn btn-outline-dark text-black"
+                style="pointer-events: none"
+              >
+                PRONTA CONSEGNA: {{ car.available }}
+              </p>
           </div>
+          <button type="button" class="btn btn-primary" [disabled]="!car.available">
+            ORDINA SUBITO!
+          </button>
         </div>
       </div>
 
       
-    </ng-container>
+   
   </div>
