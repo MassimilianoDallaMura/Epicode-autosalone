@@ -13,6 +13,7 @@ import { FordComponent } from './components/ford/ford.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { MarchiComponent } from './components/marchi/marchi.component';
 import { EvidenceComponent } from './components/evidence/evidence.component';
+import { CarComponent } from './components/car/car.component';
 
 const routes: Route[] = [
   {
@@ -46,6 +47,7 @@ const routes: Route[] = [
     AudiComponent,
     MarchiComponent,
     EvidenceComponent,
+    CarComponent,
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes)

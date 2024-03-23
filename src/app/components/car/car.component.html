@@ -1,0 +1,23 @@
+<div class="row">
+    <ng-container> 
+      <div>
+        <div class="card mb-3" [ngClass]="{ 'bg-danger': !car.available, 'bg-success': car.available }">
+          <img
+            src="https://www.kimballstock.com/pix/car/p/{{ car.modelImage }}"
+            class="card-img-top"
+            alt="{{ car.modelImage }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
+            <div class="d-flex justify-content-center align-items-baseline">
+              <p class="card-text btn btn-outline-dark me-3" style="pointer-events: none;">ANNO: {{ car.year }}</p>
+              <p class="btn btn-outline-dark text-black" style="pointer-events: none;">PREZZO: {{ car.price }}</p>
+            </div>
+            <a href="#" class="btn btn-primary">PRONTA CONSEGNA: {{ car.available }}</a>
+          </div>
+        </div>
+      </div>
+
+      
+    </ng-container>
+  </div>

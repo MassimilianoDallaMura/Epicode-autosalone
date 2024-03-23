@@ -1,4 +1,4 @@
-export interface Car {
+export interface Car {      //impaccheto i dati
     modelImage: 'string',
     brand: 'sring',
     model: 'string',
