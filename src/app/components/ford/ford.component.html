@@ -1,6 +1,26 @@
-<div class="container-fluid">
-  <h1 class="text-center mt-5 mb-3">Ford</h1>
-  <div class="row justify-content-center"> <!-- Aggiunta della classe justify-content-center -->
+<div class="container-fluid" id="margin">
+
+  <div>
+    <ng-container *ngFor="let car of cars; let i = index">
+      <div *ngIf="i < 1">
+        <div class="row align-items-center justify-content-between">
+          <div class="col text-center">
+            <h1 class="mt-5 mb-3">{{ car.brand }}</h1>
+          </div>
+          <div class="col text-center">
+            <img
+              src="https://listcarbrands.com/wp-content/uploads/{{ car.brandLogo }}"
+              class="card-img-top"
+              alt="{{ car.brandLogo }}"
+              style="width: 50%;"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="row justify-content-center">
     <ng-container *ngFor="let car of cars">
       <div class="col-12 col-md-6">
         <div
@@ -19,28 +39,23 @@
             <div class="col-6 card-body">
               <h5 class="card-title">{{ car.brand }} {{ car.model }}</h5>
               <div class="d-flex">
-                <p
-                  class="card-text btn me-3"
-                  style="pointer-events: none"
-                >
+                <p class="card-text btn me-3" style="pointer-events: none">
                   ANNO: {{ car.year }}
                 </p>
-                <p
-                  class="btn text-black"
-                  style="pointer-events: none"
-                >
+                <p class="btn text-black" style="pointer-events: none">
                   PREZZO: {{ car.price }} €
                 </p>
               </div>
-              <p
-                class="btn text-black"
-                style="pointer-events: none"
-              >
+              <p class="btn text-black" style="pointer-events: none">
                 PRONTA CONSEGNA: {{ car.available }}
               </p>
             </div>
             <div class="col-6">
-              <button type="button" class="btn btn-primary" [disabled]="!car.available">
+              <button
+                type="button"
+                class="btn btn-primary"
+                [disabled]="!car.available"
+              >
                 ORDINA SUBITO!
               </button>
             </div>

@@ -1,5 +1,7 @@
+<div class="container-fluid">
+
+
 <div class="row">
-    
       <div>
         <div class="card mb-3" [ngClass]="{ 'bg-danger': !car.available, 'bg-success': car.available }">
           <img
@@ -19,13 +21,22 @@
               >
                 PRONTA CONSEGNA: {{ car.available }}
               </p>
+              <div class="d-flex align-items-center justify-content-center">
+                <p
+                class="btn text-black justify-content-center"
+                [routerLink]="['/', car.brand.toLowerCase()]"
+              >
+                Vedi altri modelli  
+              </p>
+          
+              </div>
+              
           </div>
-          <button type="button" class="btn btn-primary" [disabled]="!car.available">
+          <button type="button" class="btn btn-primary" [disabled]="!car.available" [routerLink]="['/', car.brand.toLowerCase()]">
             ORDINA SUBITO!
           </button>
         </div>
       </div>
-
-      
-   
   </div>
+
+</div>

@@ -15,6 +15,8 @@ import { MarchiComponent } from './components/marchi/marchi.component';
 import { EvidenceComponent } from './components/evidence/evidence.component';
 import { CarComponent } from './components/car/car.component';
 import { PromozioniComponent } from './components/promozioni/promozioni.component';
+import { ChannelComponent } from './components/channel/channel.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Route[] = [
   {
@@ -50,6 +52,8 @@ const routes: Route[] = [
     EvidenceComponent,
     CarComponent,
     PromozioniComponent,
+    ChannelComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes)
